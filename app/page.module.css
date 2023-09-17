@@ -1,9 +1,13 @@
+
 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
     width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 .container span{
     color: var(--Gren-);
@@ -16,7 +20,7 @@
 }
 .container h3{
     color: var(--White-);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin: 0.10rem;
 }
 .contentTittle{
@@ -27,6 +31,9 @@
     height: 100%;
     width: 100%;
 }
+.contentTittle section{
+    padding: 1rem;
+}
 .starter{
     background-image: url(../public/tittle2.png);
     background-size: contain;
@@ -35,7 +42,38 @@
     width: 100%;
     height: 70vh;
 }
-.container section{
-    margin: 3rem;
+.starter{
     text-align: center;
+}
+.container h2{
+    color: var(--Clear-White-);
+    font-size: 2rem;
+}
+.cardContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2rem;
+}
+.card{
+    background-color: var(--Dark-void-);
+    width: 30%;
+    padding: 1rem;
+    color: var(--Clear-White-);
+    border-radius: 20px;
+    border: 1px solid var(--Gren-);
+}
+.card p{
+    font-size: 1.2rem;
+    margin: 0.5rem;
+}
+.card h1{
+    font-size: 1.5rem;
+    margin: 0.5rem;
+}
+.kalix{
+    background-color: var(--Black-russian);
+    width: 100%;
+    height: 70vh;
 }
