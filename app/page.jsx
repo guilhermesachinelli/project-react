@@ -14,8 +14,8 @@ export default function Home() {
           </section>
         </div>
       </div>
-      <h2>Somos uma plataforma completa de</h2>
-      <h2> aprendizado em programação</h2>
+        <h2>Somos uma plataforma completa de</h2>
+        <h2> aprendizado em programação</h2>
       <div className={styles.cardContainer}>
         <div className={styles.card}>
           <h1>Acessibilidade</h1>
@@ -28,10 +28,9 @@ export default function Home() {
         <div className={styles.card}>
           <h1>Aprendizado Interativo e Prático</h1>
           <p>Acreditamos que a melhor maneira de aprender programação é na prática. Oferecemos uma experiência de aprendizado, na qual você pode escrever código real desde o início. </p>
-          </div>
+        </div>
       </div>
       <div className={styles.kalix}>
-
       </div>
     </div>
   )
