@@ -6,16 +6,18 @@
   --White-: #E1E1E6;
   --Clear-White-:#FFFFFF;
   --Gren-:#04D361;
+  --Red-: #F54358;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
   background-color: var(--Dark-void);
 }
 ::-webkit-scrollbar {

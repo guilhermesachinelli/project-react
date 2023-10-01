@@ -1,8 +1,10 @@
 import styles from './page.module.css'
 import './globals.css'
+import { Header } from './components/header/Header'
 export default function Home() {
   return (
     <div className={styles.container}>
+      <Header />
       <div className={styles.starter}>
         <div className={styles.contentTittle}>
           <span>🖐<b>"Hello World"</b></span>

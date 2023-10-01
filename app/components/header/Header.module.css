@@ -1,0 +1,29 @@
+.container{
+    width: 100%;
+    height: 10vh;
+    background-color: var(--Dark-void);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--Gren-);
+}
+.tittle{
+    display: flex;
+    text-align: center;
+    
+}
+.container span{
+    margin: 0;
+    padding: 0;
+    color: var(--Gren-);
+    font-size: 3rem;
+}
+.container h1{
+    color: var(--Medium-Purple);
+    font-size: 3rem;
+}
+

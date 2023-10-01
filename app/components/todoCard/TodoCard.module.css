@@ -1,0 +1,16 @@
+.complet{
+    background-color: var(--Gren-);
+}
+.remove{
+    background-color: var(--Red-);
+}
+.todo{
+    background-color: var(--Dark-void);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
