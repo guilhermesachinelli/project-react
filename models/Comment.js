@@ -1,4 +1,4 @@
-export class Comment {
+class Comment {
     constructor(text) {
         this.id = this.ramdonId();
         this.text = text;
@@ -7,3 +7,4 @@ export class Comment {
         return Math.floor(Math.random() * 1000);
     }
 }
+export default Comment;

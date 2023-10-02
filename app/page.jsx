@@ -3,7 +3,7 @@ import styles from './page.module.css'
 import './globals.css'
 import { Header } from './components/header/Header'
 import { useState } from 'react'
-import { Comment } from 'models/Comment'
+import Comment from 'models/Comment'
 import { CommentList } from 'models/CommentList'
 
 export default function Home() {
@@ -62,11 +62,14 @@ export default function Home() {
       </div>
       <form onSubmit={addComeent}>
         <input type="text" onChange={(e) => setComments(e.target.value)} />
+        <button type="submit">É ISSO MANÉ</button>
       </form>
       {
-        commentList.map((comment) => (
-          <div key={comments.id}>
-            <h1>{comment.text}</h1>
+        commentList.comments.map((comment) => (
+          <div>
+            <li key={comment.id}>
+              <h1>{comment.comment}</h1>
+            </li>
           </div>
         ))
       }
