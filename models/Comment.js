@@ -1,7 +1,7 @@
 export class Comment {
-    constructor(content) {
+    constructor(text) {
         this.id = this.ramdonId();
-        this.content = content;
+        this.text = text;
     }
     ramdonId() {
         return Math.floor(Math.random() * 1000);

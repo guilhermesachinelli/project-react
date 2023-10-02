@@ -8,13 +8,12 @@ import { CommentList } from 'models/CommentList'
 
 export default function Home() {
   const [comments, setComments] = useState(new Comment(''));
-  const [commentList, setCommentList] = useState(new CommentList([]));
-  const addComeent = () => {
-    const newComment = [...commentList, {
-      comments
-    },
-    ];
-    setCommentList(newComment);
+  const listComments = new CommentList();
+  const [commentList, setCommentList] = useState(listComments);
+  const addComeent = (e) => {
+    e.preventDefault();
+    listComments.addComment(comments);
+    setCommentList(listComments);
   }
   return (
     <div className={styles.container}>
@@ -67,7 +66,7 @@ export default function Home() {
       {
         commentList.map((comment) => (
           <div key={comments.id}>
-            <h1>{comment.content}</h1>
+            <h1>{comment.text}</h1>
           </div>
         ))
       }
