@@ -1,7 +1,21 @@
+"use client"
 import styles from './page.module.css'
 import './globals.css'
 import { Header } from './components/header/Header'
+import { useState } from 'react'
+import { Comment } from 'models/Comment'
+import { CommentList } from 'models/CommentList'
+
 export default function Home() {
+  const [comments, setComments] = useState(new Comment(''));
+  const [commentList, setCommentList] = useState(new CommentList([]));
+  const addComeent = () => {
+    const newComment = [...commentList, {
+      comments
+    },
+    ];
+    setCommentList(newComment);
+  }
   return (
     <div className={styles.container}>
       <Header />
@@ -18,20 +32,20 @@ export default function Home() {
       </div>
       <h2>Somos uma plataforma completa de</h2>
       <h2> aprendizado em programação</h2>
-        <div className={styles.card}>
-          <h1>Acessibilidade</h1>
-          <p>Nossa plataforma foi projetada com o usuário em mente, tornando a programação acessível a todos, independentemente de seu nível de conhecimento prévio.</p>
-          <hr />
-          <h1>Aprendizado Interativo e Prático</h1>
-          <p>Acreditamos que a melhor maneira de aprender programação é na prática. Oferecemos uma experiência de aprendizado, na qual você pode escrever código real desde o início. </p>
-          <hr />
-          <h1>Variedade de Linguagens e Tecnologias</h1>
-          <p> Temos uma ampla gama de linguagens e tecnologias. Desde linguagens populares como Python, JavaScript e Java até frameworks e bibliotecas.</p>
-        </div>
+      <div className={styles.card}>
+        <h1>Acessibilidade</h1>
+        <p>Nossa plataforma foi projetada com o usuário em mente, tornando a programação acessível a todos, independentemente de seu nível de conhecimento prévio.</p>
+        <hr />
+        <h1>Aprendizado Interativo e Prático</h1>
+        <p>Acreditamos que a melhor maneira de aprender programação é na prática. Oferecemos uma experiência de aprendizado, na qual você pode escrever código real desde o início. </p>
+        <hr />
+        <h1>Variedade de Linguagens e Tecnologias</h1>
+        <p> Temos uma ampla gama de linguagens e tecnologias. Desde linguagens populares como Python, JavaScript e Java até frameworks e bibliotecas.</p>
+      </div>
       <div className={styles.kalix}>
-      <h2>Método de aprendizado</h2>
+        <h2>Método de aprendizado</h2>
         <div className={styles.cardContainer}>
-        <div className={styles.kalixCard}>
+          <div className={styles.kalixCard}>
             <h1>Foco</h1>
             <p>Programação é um universo infinito, logo ter foco é essencial. Nós vamos direto ao ponto no que realmente importa para você dominar as ferramentas.</p>
           </div>
@@ -45,8 +59,18 @@ export default function Home() {
             <h1>Grupo</h1>
             <p>A conexão entre Devs impulsiona seu repertório técnico, suas habilidades comportamentais e sua rede de contatos. Além de ajudar a assimilar e fixar todo aprendizado.</p>
           </div>
-          </div>
+        </div>
       </div>
+      <form onSubmit={addComeent}>
+        <input type="text" onChange={(e) => setComments(e.target.value)} />
+      </form>
+      {
+        commentList.map((comment) => (
+          <div key={comments.id}>
+            <h1>{comment.content}</h1>
+          </div>
+        ))
+      }
     </div>
   )
 }

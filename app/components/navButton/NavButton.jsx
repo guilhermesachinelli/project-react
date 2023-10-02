@@ -8,7 +8,7 @@ export const NavButton = () => {
                     <Link href="/">Home</Link>
                 </button>
                 <button>
-                    <Link href="/community">Comunidade</Link>
+                    <Link href="/community">Todo List</Link>
                 </button>
                 <button>
                     <Link href="/">Home</Link>
