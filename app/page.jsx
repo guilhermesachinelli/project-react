@@ -3,11 +3,12 @@ import styles from './page.module.css'
 import './globals.css'
 import { Header } from './components/header/Header'
 import { useState } from 'react'
-import Comment from 'models/Comment'
+import  Comment  from 'models/Comment'
 import { CommentList } from 'models/CommentList'
 
 export default function Home() {
-  const [comments, setComments] = useState(new Comment(''));
+  const newComment = new Comment('');
+  const [comments, setComments] = useState(newComment);
   const listComments = new CommentList();
   const [commentList, setCommentList] = useState(listComments);
   const addComeent = (e) => {
@@ -66,10 +67,9 @@ export default function Home() {
       </form>
       {
         commentList.comments.map((comment) => (
-          <div>
-            <li key={comment.id}>
-              <h1>{comment.comment}</h1>
-            </li>
+          <div key={comment.id}>
+            <h1>{comment.comment}</h1>
+            
           </div>
         ))
       }

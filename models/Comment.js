@@ -4,7 +4,7 @@ class Comment {
         this.text = text;
     }
     ramdonId() {
-        return Math.floor(Math.random() * 1000);
+        return Math.floor(Math.random() * 10000);
     }
 }
 export default Comment;
